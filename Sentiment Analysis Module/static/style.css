@@ -1,0 +1,384 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #28a745; /* Changed to green */
+    color: white;
+    padding: 20px 0;
+    border-bottom: 2px solid #218838; /* Matching darker green */
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Rounded image */
+    margin-right: 15px;
+}
+.dropdown {
+    position: absolute;
+    top: 20px;
+    left: 1250px;
+    right: 34px;
+}
+/* Custom dropdown button styling */
+.btn-secondary.dropdown-toggle {
+    background-color: #28a745; /* Changed to green */
+    border-color: #28a745; /* Matching border color */
+    color: #fff; /* White text color */
+    padding: 0.5rem 1rem; /* Adjust padding for better look */
+    border-radius: 50%; /* Make button circular */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition effect */
+}
+
+.btn-secondary.dropdown-toggle:hover, 
+.btn-secondary.dropdown-toggle:focus {
+    background-color: #218838; /* Darker green on hover/focus */
+    border-color: #218838; /* Matching border color */
+    color: #fff; /* Maintain white text color */
+}
+
+.dropdown-menu {
+    border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 0.5rem 0; /* Add padding for better spacing */
+}
+
+.dropdown-item {
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Light gray background on hover */
+}
+
+h1 {
+    margin: 0;
+}
+
+.symptom-checker, .appointment-scheduling {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Changed to green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Changed to darker green */
+}
+
+#diagnosis {
+    margin-top: 20px;
+    font-size: 18px
+}
+/* Add this to your 'style.css' file */
+
+/* General button hover effect */
+button:hover {
+    background-color: #007bff; /* Change button background color on hover */
+    color: #fff; /* Change text color to white on hover */
+    border-color: #0056b3; /* Optionally change border color */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Additional customization for different buttons */
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade of blue for primary button hover */
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d; /* Darker shade for secondary button hover */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Darker shade for success button hover */
+}
+
+.btn-info:hover {
+    background-color: #138496; /* Darker shade for info button hover */
+}
+/* Style the document upload section */
+.document-upload {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.document-upload h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.document-upload p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control-file {
+    padding: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #28a745; /* Changed to green */
+    border-color: #28a745; /* Matching border color */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Changed to darker green */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+#uploadStatus {
+    font-size: 1rem;
+    color: #28a745;
+    display: none;
+}
+.medication-reminder {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.medication-reminder h2 {
+    margin-bottom: 20px;
+}
+
+.medication-reminder form {
+    margin-bottom: 20px;
+}
+
+#reminderItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+#reminderItems li {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+/* Custom CSS for Back to Drug Store Button */
+.btn-back {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    z-index: 1000;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #007bff; /* Change to your preferred hover color */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-back:active {
+    background-color: #0056b3; /* Darker shade for active state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Custom CSS for Create Patient Folder Button */
+.btn-create-folder {
+    background-color: #28a745; /* Primary green color */
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-create-folder:hover {
+    background-color: #218838; /* Darker green for hover effect */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.btn-create-folder:active {
+    background-color: #1e7e34; /* Even darker green for active state */
+    transform: scale(0.95); /* Slightly shrink button on click */
+}
+
+.btn-create-folder:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Green shadow for focus */
+}
+/* Custom CSS for Modal */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.close {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-control {
+    border-radius: 8px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-submit:active {
+    background-color: #004494;
+    transform: scale(0.95);
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+.btn-cancel:active {
+    background-color: #4e555b;
+    transform: scale(0.95);
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 15px 20px;
+}
+/* Custom CSS for User Profile Dropdown */
+.dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.dropdown-item {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+.dropdown-item i {
+    margin-right: 8px;
+}
+
+.dropdown-divider {
+    border-top: 1px solid #dee2e6;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-secondary:active {
+    background-color: #4e555b;
+    border-color: #4e555b;
+}
