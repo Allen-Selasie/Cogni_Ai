@@ -1,36 +1,36 @@
 document.getElementById('checkBtn').addEventListener('click', async function() {
     const symptomsInput = document.getElementById('sentiment').value;
-    const input = symptomsInput.toLowerCase().split(',').map(symptom => symptom.trim());
- 
+    const input = symptomsInput.trim();
+
+    // Create loading animation
+    const loadingAnimation = document.createElement('div');
+    loadingAnimation.id = 'loading';
+    loadingAnimation.innerHTML = '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>';
+    document.body.appendChild(loadingAnimation);
+
     try {
-        // Call the Gemmi API with the symptoms and severity
-        const response = await fetch('/analyse', {  // Replace with actual API endpoint
+        const response = await fetch('/analyse', {
             method: 'POST',
             headers: {
-              
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ input: input})
+            body: JSON.stringify({ input: input })
         });
 
         const data = await response.json();
-        console.log(data);
-        if (response.ok) {
-            const analysis = data.Analysis || "No matching diagnosis found. Please consult a healthcare professional.";
-        const loadingAnimation = document.createElement('div');
-        loadingAnimation.id = 'loading';
-        loadingAnimation.innerText = 'Loading...';
-        document.body.appendChild(loadingAnimation);
 
         // Remove loading animation after analysis is done
         document.body.removeChild(loadingAnimation);
-            document.getElementById('analysis').innerText = analysis;
-    
+
+        if (response.ok) {
+            const analysis = data.Analysis || "No matching diagnosis found. Please consult a healthcare professional.";
+            document.getElementById('analysis').innerHTML = analysis;
         } else {
-            document.getElementById('diagnosis').innerText = "An error occurred. Please try again later.";
+            document.getElementById('analysis').innerText = "An error occurred. Please try again later.";
         }
     } catch (error) {
         console.error('Error:', error);
-        document.getElementById('diagnosis').innerText = "An error occurred. Please try again later.";
+        document.body.removeChild(loadingAnimation);
+        document.getElementById('analysis').innerText = "An error occurred. Please try again later.";
     }
 });
